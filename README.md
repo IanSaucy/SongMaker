@@ -2,7 +2,7 @@
 A program to make random songs
 
 This program makes random song sets from a set of text files that have different types of words and names in them.
-The number of albums per artist and songs per album is randomy set between two variables.
+The number of albums per artist and songs per album is randomly set between two variables.
 If you want to change the per artist album count or per album song count change the variable at the top of the SongMaker class.
 
 The program will generate and overwrite the existing randomSong.txt file every run. You can either clone and run yourself or simply
