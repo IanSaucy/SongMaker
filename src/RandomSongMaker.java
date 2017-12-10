@@ -133,7 +133,7 @@ public class RandomSongMaker {
                     songObj.setAlbum(album);
                     songObj.setTitle(songTitle);
                     songObj.setPathToFile(makePath());
-                    songObj.setPlayCount(makePlaycount());
+                    songObj.setPlayCount(makePlayCount());
                     songObj.setThumbed(makeThumb());
                     songObj.setLength(makeLength());
                     songObj.setPathToAlbumCover(makePathToAlbumCover());
@@ -293,14 +293,14 @@ public class RandomSongMaker {
         return thumb;
     }
 
-    public int makePlaycount(){
+    public int makePlayCount(){
         int playCount = 0;
         playCount = ThreadLocalRandom.current().nextInt(0, MAX_PLAY_COUNT);
         return playCount;
     }
 
     public int makeLength(){
-        int length = 9;
+        int length;
         length = ThreadLocalRandom.current().nextInt(MIN_LENTH, MAX_LENGTH);
         return length;
     }
