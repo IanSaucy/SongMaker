@@ -156,7 +156,7 @@ public class RandomSongMaker {
         int choice = ThreadLocalRandom.current().nextInt(1, 25);
         path += base;
         path += choice;
-        path += ".txt";
+        path += ".jpg";
         return path;
     }
 
