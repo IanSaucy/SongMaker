@@ -25,7 +25,9 @@ public class RandomSongMaker {
 
     //Number of songs, artist, and albums to create
     private final int MAX_ALBUM_COUNT = 10;
+    private final int MIN_ALBUM_COUNT = 1;
     private final int MAX_SONG_COUNT = 25;
+    private final int MIN_SONG_COUNT = 3;
     private final int MAX_PLAY_COUNT = 50;
     private final int MAX_LENGTH = 36000;
     private final int MIN_LENTH = 9000;
@@ -122,9 +124,9 @@ public class RandomSongMaker {
         //Create artists as they're out top level item
         while(randomSongs.size() < DESIRED_SONG_COUNT){
             String artist = makeArtist();
-            for (int j = 0; j < ThreadLocalRandom.current().nextInt(1, MAX_ALBUM_COUNT) ; j++) {
+            for (int j = 0; j < ThreadLocalRandom.current().nextInt(MIN_ALBUM_COUNT, MAX_ALBUM_COUNT) ; j++) {
                 String album = makeAlbum();
-                for (int k = 0; k < ThreadLocalRandom.current().nextInt(3, MAX_SONG_COUNT); k++) {
+                for (int k = 0; k < ThreadLocalRandom.current().nextInt(MIN_SONG_COUNT, MAX_SONG_COUNT); k++) {
                     String songTitle = makeSong();
                     Song songObj = new Song();
                     songObj.setArtist(artist);
