@@ -126,6 +126,7 @@ public class RandomSongMaker {
             String artist = makeArtist();
             for (int j = 0; j < ThreadLocalRandom.current().nextInt(MIN_ALBUM_COUNT, MAX_ALBUM_COUNT) ; j++) {
                 String album = makeAlbum();
+                String albumCoverPath = makePathToAlbumCover();
                 for (int k = 0; k < ThreadLocalRandom.current().nextInt(MIN_SONG_COUNT, MAX_SONG_COUNT); k++) {
                     String songTitle = makeSong();
                     Song songObj = new Song();
@@ -136,7 +137,7 @@ public class RandomSongMaker {
                     songObj.setPlayCount(makePlayCount());
                     songObj.setThumbed(makeThumb());
                     songObj.setLength(makeLength());
-                    songObj.setPathToAlbumCover(makePathToAlbumCover());
+                    songObj.setPathToAlbumCover(albumCoverPath);
 
                     //Add song to arrayList
                     randomSongs.add(songObj);
@@ -152,7 +153,7 @@ public class RandomSongMaker {
 
     public String makePathToAlbumCover(){
         String path = "";
-        String base = "albumCover";
+        String base = "images/albumCover";
         int choice = ThreadLocalRandom.current().nextInt(1, 25);
         path += base;
         path += choice;
