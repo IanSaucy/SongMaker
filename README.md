@@ -1,7 +1,7 @@
 # SongMaker
 A program to make random songs
 
-*If you pulled the RandomSongs.txt from this repo before 12/13 @ 2PM there is an issue with the albumart URL, check issue #1*
+**If you pulled the RandomSongs.txt from this repo before 12/13 @ 2PM there is an issue with the albumart URL, check issue #1**
 
 This program makes random song sets from a set of text files that have different types of words and names in them.
 The number of albums per artist and songs per album is randomly set between two variables.
